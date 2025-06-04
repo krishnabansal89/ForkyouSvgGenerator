@@ -9,19 +9,33 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "@upstash/redis": "^1.35.0",
+    "@vercel/og": "^0.6.8",
+    "camelcase": "^8.0.0",
+    "fs": "^0.0.1-security",
+    "html-parse-stringify2": "^2.0.1",
+    "html-react-parser": "^5.2.5",
+    "inline-css": "^4.0.3",
+    "jsdom": "^26.1.0",
+    "next": "15.3.3",
+    "node-html-parser": "^7.0.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.3.3"
+    "sanitize-html": "^2.17.0",
+    "satori": "^0.13.2",
+    "satori-html": "^0.3.2",
+    "style-to-object": "^1.0.8"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.3.3",
-    "@eslint/eslintrc": "^3"
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }
