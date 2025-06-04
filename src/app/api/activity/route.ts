@@ -43,9 +43,20 @@ export async function GET(req: Request) {
   // const svg = await svgFromSatori(rows as string)
   const ActivityGrid = generateActivityGrid({ matrix:rows as Record<string, number[]> });
 
+  const matrixObj = rows as Record<string, number[]>;
+ const numCols = Object.keys(matrixObj).length;
+ const numRows = Math.max(...Object.values(matrixObj).map(arr => arr.length));
+ const boxSize = 32; // px
+ const gap = 8;      // px
+ const padding = 16; // px (can be more/less)
+ 
+ const width = numCols * boxSize + (numCols - 1) * gap + padding * 2;
+ const height = numRows * boxSize + (numRows - 1) * gap + padding * 2;
+ 
+
   const svg = await satori(ActivityGrid, {
-    width: 800,
-    height: 400,
+    width: width,
+    height: height,
     fonts: [
       {
         name: 'Inter',
